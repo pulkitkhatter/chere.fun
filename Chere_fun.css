@@ -1,10 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-}
-
-body {
-    background-color: #0c0116;
+    box-sizing: border-box;
 }
 
 header {
@@ -12,6 +9,18 @@ header {
     height: 70px;
     margin-bottom: 10px;
     background-color: darkblue;
+}
+
+table {
+    border: 4px solid rgb(68, 64, 64);
+    margin: 15px;
+    padding: 20px;
+}
+
+table h4 {
+    padding: 20px 20px;
+    margin-bottom: 36vh;
+    font-size: 1.5em;
 }
 
 h1 {
@@ -24,11 +33,6 @@ h1 {
     margin-top: 10px;
     background-color: darkblue;
     color: greenyellow;
-}
-
-span {
-    color: aqua;
-    background-color: darkblue;
 }
 
 ul {
@@ -44,13 +48,19 @@ li {
     background-color: darkblue;
 }
 
+a {
+    color: gold;
+    text-decoration: none;
+}
+
 li:hover {
     background-color: #04b149;
+    cursor: pointer;
 }
 
 footer {
     margin: 10px;
-    padding: 10px;
+    padding-top: 10px;
     background-color: darkblue;
     color: gold;
 }
@@ -60,16 +70,93 @@ container {
     height: 70vh;
     padding: 10px;
     display: flex;
-    background-color: aqua;
+    background-color: transparent;
     justify-content: space-between;
     background-size: cover;
 }
 
-container .one {
-    float: left;
+.one,
+.two {
     background-size: cover;
 }
 
-container .two {
-    float: right;
+div.content {
+    background-color: transparent;
+    height: 300px;
+    width: 450px;
+}
+
+.content h1 {
+    padding: 10px;
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #222;
+}
+
+.form {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 480px;
+    height: 330px;
+    font-family: Lato, sans-serif;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: white;
+    background: #222;
+    border-radius: 3px;
+}
+
+.form::after {
+    position: absolute;
+    content: "";
+    top: calc(-1 * 3px);
+    left: calc(-1 * 3px);
+    z-index: -1;
+    width: calc(100% + 3px * 2);
+    height: calc(100% + 3px * 2);
+    background: linear-gradient( 60deg, hsl(224, 85%, 66%), hsl(269, 85%, 66%), hsl(314, 85%, 66%), hsl(359, 85%, 66%), hsl(44, 85%, 66%), hsl(89, 85%, 66%), hsl(134, 85%, 66%), hsl(179, 85%, 66%));
+    background-size: 300% 300%;
+    background-position: 0 50%;
+    border-radius: calc(2 * 3px);
+    animation: border 4s alternate infinite;
+}
+
+@keyframes border {
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.random {
+    opacity: 0.7;
+    background-color: rgb(52, 102, 196);
+    border: 2px solid rgb(223, 73, 73);
+    color: beige;
+    font-size: 1.2em;
+    height: 50px;
+    width: 120px;
+}
+
+.random:hover {
+    opacity: 1;
+    background-color: rgb(87, 87, 226);
+    border: 2px solid greenyellow;
+    cursor: pointer;
+}
+
+.back {
+    background-color: rgb(52, 102, 196);
+    font-size: 1.2em;
+    height: 50px;
+    width: 120px;
+}
+
+.back:hover {
+    background-color: rgb(87, 87, 226);
 }
